@@ -7,9 +7,14 @@
 </div>
 <h2>Here are some links to help you start: </h2>
 
-<!-- Angular's interpolation binding syntax: {{}} same as Angular Express-->
+<!-- Angular's interpolation binding syntax: {{}} same as Angular Express, one way data binding
+    binds the class model to the template: 1-way data binding
+--> 
 
 <h1>{{title}}</h1>
 <h2>{{hero.name}} details!</h2>
 <div><label>id: </label>{{hero.id}}</div>
 <div><label>name: </label><input [(ngModel)]="hero.name" placeholder="name"></div>
+                          <!-- [(ngModel)] two way binding
+                              between the template and appComponent class
+                          -->

@@ -6,12 +6,12 @@ export class Hero {
 }
 
 /*
-    Component Decorator
+    Component Decorator: 
       requires a selector and template/templateUrl
 */
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-root', //element that attached to || inject templateURL
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
