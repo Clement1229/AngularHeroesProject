@@ -11,6 +11,18 @@
     binds the class model to the template: 1-way data binding
 --> 
 
+
+<!-- and now reference it through the <hero-detail> directive
+     
+     hero is a property in hero-detail.component.ts
+     selectedHero is a property in appcomponent.ts
+
+     we want both to math eachother
+-->
+    <hero-detail [hero]="selectedHero"></hero-detail>
+    
+
+
 <h1>{{title}}</h1>
 <h2>My Heroes</h2>
 <ul class="heroes">
@@ -21,17 +33,9 @@
     <span class="badge">{{hero.id}}</span> {{hero.name}}
   </li>
 </ul>
+<!---->
 
-<div *ngIf="selectedHero">
-  <h2>{{selectedHero.name}} details!</h2>
-  <div><label>id: </label>{{selectedHero.id}}</div>
-  <div>
-      <label>name: </label>
-      <input [(ngModel)]="selectedHero.name" placeholder="name"/>
-  </div>
-</div>
-
+<!-- hero details was apart of the AppComponent but we turned it into its own component-->
                           <!-- [(ngModel)] two way binding
                               between the template and appComponent class
                           -->
-                        
